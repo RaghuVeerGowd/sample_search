@@ -1,0 +1,41 @@
+ 
+
+<div id="select_form" align="left">
+<h3> SEARCH BY :: </h3>
+<select name="choice" onchange="change1(value);"> 
+  
+  <option >--select--</option>
+  <option value="1" >Name</option>
+  
+</select>
+ </div> 
+<%= render 'search_index'%>
+<br/>
+<form >
+<p>
+<table border=1>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Country</th>
+    <th>Action</th>
+    <th>Action</th>
+    <th>Action</th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.age %></td>
+    <td><%= product.country %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</p>
+<br />
+
+<%= link_to 'New Contact', new_product_path %>
+</div>

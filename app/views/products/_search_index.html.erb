@@ -1,0 +1,15 @@
+
+<%= form_tag({:controller => 'products', :action => 'search'}, {:method => 'get'}) %>
+
+
+      <%= text_field_tag :search,"",placeholder: "enter name" ,value: params[:search],:id => 'search_field' %>
+      <%#= text_field_tag :search,"",placeholder: "enter age" ,value: params[:search],:id => 'search_age_field' %>
+      <%#= text_field_tag :search,"",placeholder: "enter country" ,value: params[:search], :style => "display: none;",:id => 'search_country_field' %>
+
+      <%= submit_tag "Search"  %> 
+      
+
+
+      <!-- <input type="text" name="Name" id="field_name" placeholder="enter name" style="display:none"></input>
+  <input type="text" name="Age" id="field_age" placeholder="enter age" style="display:none"></input>
+  <input type="text" name="Country" id="field_country" placeholder="enter country" style="display:none"></input> -->
